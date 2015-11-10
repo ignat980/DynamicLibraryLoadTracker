@@ -10,6 +10,8 @@
 		CD98F6741BEED80700627134 /* DynamicLibraryLoadTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = CD98F6731BEED80700627134 /* DynamicLibraryLoadTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD98F67B1BEED80700627134 /* DynamicLibraryLoadTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD98F6701BEED80700627134 /* DynamicLibraryLoadTracker.framework */; };
 		CD98F6801BEED80800627134 /* DynamicLibraryLoadTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98F67F1BEED80800627134 /* DynamicLibraryLoadTrackerTests.swift */; };
+		CD98F68D1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = CD98F68C1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h */; };
+		CD98F6921BF0396E00627134 /* DLLoadTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98F68E1BF0193600627134 /* DLLoadTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		CD98F67A1BEED80700627134 /* DynamicLibraryLoadTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicLibraryLoadTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD98F67F1BEED80800627134 /* DynamicLibraryLoadTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicLibraryLoadTrackerTests.swift; sourceTree = "<group>"; };
 		CD98F6811BEED80800627134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD98F68C1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DynamicLibraryLoadTracker-Swift.h"; sourceTree = SOURCE_ROOT; };
+		CD98F68E1BF0193600627134 /* DLLoadTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLLoadTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				CD98F6731BEED80700627134 /* DynamicLibraryLoadTracker.h */,
+				CD98F68C1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h */,
+				CD98F68E1BF0193600627134 /* DLLoadTracker.swift */,
 				CD98F6751BEED80700627134 /* Info.plist */,
 			);
 			path = DynamicLibraryLoadTracker;
@@ -94,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD98F6741BEED80700627134 /* DynamicLibraryLoadTracker.h in Headers */,
+				CD98F68D1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD98F6921BF0396E00627134 /* DLLoadTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 		CD98F6851BEED80800627134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.DynamicLibraryLoadTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CD98F6861BEED80800627134 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
