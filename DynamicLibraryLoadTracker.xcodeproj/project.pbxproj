@@ -7,14 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD4D92BB1BF2D5EC0089A0B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D92BA1BF2D5EC0089A0B2 /* AppDelegate.swift */; };
+		CD4D92BD1BF2D5EC0089A0B2 /* TDLLTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D92BC1BF2D5EC0089A0B2 /* TDLLTViewController.swift */; };
+		CD4D92C01BF2D5EC0089A0B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D92BE1BF2D5EC0089A0B2 /* Main.storyboard */; };
+		CD4D92C21BF2D5EC0089A0B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4D92C11BF2D5EC0089A0B2 /* Assets.xcassets */; };
+		CD4D92C51BF2D5EC0089A0B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D92C31BF2D5EC0089A0B2 /* LaunchScreen.storyboard */; };
+		CD4D92D01BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D92CF1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.swift */; };
+		CD4D92DB1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D92DA1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.swift */; };
 		CD98F6741BEED80700627134 /* DynamicLibraryLoadTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = CD98F6731BEED80700627134 /* DynamicLibraryLoadTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD98F67B1BEED80700627134 /* DynamicLibraryLoadTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD98F6701BEED80700627134 /* DynamicLibraryLoadTracker.framework */; };
 		CD98F6801BEED80800627134 /* DynamicLibraryLoadTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98F67F1BEED80800627134 /* DynamicLibraryLoadTrackerTests.swift */; };
-		CD98F68D1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = CD98F68C1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h */; };
 		CD98F6921BF0396E00627134 /* DLLoadTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD98F68E1BF0193600627134 /* DLLoadTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD4D92CC1BF2D5EC0089A0B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD98F6671BEED80700627134 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD4D92B71BF2D5EB0089A0B2;
+			remoteInfo = TestingDynamicLibraryLoadTracker;
+		};
+		CD4D92D71BF2D5EC0089A0B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD98F6671BEED80700627134 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD4D92B71BF2D5EB0089A0B2;
+			remoteInfo = TestingDynamicLibraryLoadTracker;
+		};
 		CD98F67C1BEED80700627134 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD98F6671BEED80700627134 /* Project object */;
@@ -25,17 +45,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD4D92B81BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingDynamicLibraryLoadTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D92BA1BF2D5EC0089A0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD4D92BC1BF2D5EC0089A0B2 /* TDLLTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLLTViewController.swift; sourceTree = "<group>"; };
+		CD4D92BF1BF2D5EC0089A0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD4D92C11BF2D5EC0089A0B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD4D92C41BF2D5EC0089A0B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD4D92C61BF2D5EC0089A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4D92CB1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingDynamicLibraryLoadTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D92CF1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingDynamicLibraryLoadTrackerTests.swift; sourceTree = "<group>"; };
+		CD4D92D11BF2D5EC0089A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4D92D61BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingDynamicLibraryLoadTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D92DA1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingDynamicLibraryLoadTrackerUITests.swift; sourceTree = "<group>"; };
+		CD4D92DC1BF2D5EC0089A0B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD98F6701BEED80700627134 /* DynamicLibraryLoadTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicLibraryLoadTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD98F6731BEED80700627134 /* DynamicLibraryLoadTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicLibraryLoadTracker.h; sourceTree = "<group>"; };
 		CD98F6751BEED80700627134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD98F67A1BEED80700627134 /* DynamicLibraryLoadTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicLibraryLoadTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD98F67F1BEED80800627134 /* DynamicLibraryLoadTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicLibraryLoadTrackerTests.swift; sourceTree = "<group>"; };
 		CD98F6811BEED80800627134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD98F68C1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DynamicLibraryLoadTracker-Swift.h"; sourceTree = SOURCE_ROOT; };
 		CD98F68E1BF0193600627134 /* DLLoadTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLLoadTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD4D92B51BF2D5EB0089A0B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D92C81BF2D5EC0089A0B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D92D31BF2D5EC0089A0B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD98F66C1BEED80700627134 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,11 +107,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD4D92B91BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTracker */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D92BA1BF2D5EC0089A0B2 /* AppDelegate.swift */,
+				CD4D92BC1BF2D5EC0089A0B2 /* TDLLTViewController.swift */,
+				CD4D92BE1BF2D5EC0089A0B2 /* Main.storyboard */,
+				CD4D92C11BF2D5EC0089A0B2 /* Assets.xcassets */,
+				CD4D92C31BF2D5EC0089A0B2 /* LaunchScreen.storyboard */,
+				CD4D92C61BF2D5EC0089A0B2 /* Info.plist */,
+			);
+			path = TestingDynamicLibraryLoadTracker;
+			sourceTree = "<group>";
+		};
+		CD4D92CE1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D92CF1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.swift */,
+				CD4D92D11BF2D5EC0089A0B2 /* Info.plist */,
+			);
+			path = TestingDynamicLibraryLoadTrackerTests;
+			sourceTree = "<group>";
+		};
+		CD4D92D91BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D92DA1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.swift */,
+				CD4D92DC1BF2D5EC0089A0B2 /* Info.plist */,
+			);
+			path = TestingDynamicLibraryLoadTrackerUITests;
+			sourceTree = "<group>";
+		};
 		CD98F6661BEED80700627134 = {
 			isa = PBXGroup;
 			children = (
 				CD98F6721BEED80700627134 /* DynamicLibraryLoadTracker */,
 				CD98F67E1BEED80700627134 /* DynamicLibraryLoadTrackerTests */,
+				CD4D92B91BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTracker */,
+				CD4D92CE1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests */,
+				CD4D92D91BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests */,
 				CD98F6711BEED80700627134 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +155,9 @@
 			children = (
 				CD98F6701BEED80700627134 /* DynamicLibraryLoadTracker.framework */,
 				CD98F67A1BEED80700627134 /* DynamicLibraryLoadTrackerTests.xctest */,
+				CD4D92B81BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker.app */,
+				CD4D92CB1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.xctest */,
+				CD4D92D61BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				CD98F6731BEED80700627134 /* DynamicLibraryLoadTracker.h */,
-				CD98F68C1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h */,
 				CD98F68E1BF0193600627134 /* DLLoadTracker.swift */,
 				CD98F6751BEED80700627134 /* Info.plist */,
 			);
@@ -100,13 +189,65 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD98F6741BEED80700627134 /* DynamicLibraryLoadTracker.h in Headers */,
-				CD98F68D1BF018E500627134 /* DynamicLibraryLoadTracker-Swift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CD4D92B71BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4D92E31BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTracker" */;
+			buildPhases = (
+				CD4D92B41BF2D5EB0089A0B2 /* Sources */,
+				CD4D92B51BF2D5EB0089A0B2 /* Frameworks */,
+				CD4D92B61BF2D5EB0089A0B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestingDynamicLibraryLoadTracker;
+			productName = TestingDynamicLibraryLoadTracker;
+			productReference = CD4D92B81BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD4D92CA1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4D92E41BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTrackerTests" */;
+			buildPhases = (
+				CD4D92C71BF2D5EC0089A0B2 /* Sources */,
+				CD4D92C81BF2D5EC0089A0B2 /* Frameworks */,
+				CD4D92C91BF2D5EC0089A0B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4D92CD1BF2D5EC0089A0B2 /* PBXTargetDependency */,
+			);
+			name = TestingDynamicLibraryLoadTrackerTests;
+			productName = TestingDynamicLibraryLoadTrackerTests;
+			productReference = CD4D92CB1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD4D92D51BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4D92E51BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTrackerUITests" */;
+			buildPhases = (
+				CD4D92D21BF2D5EC0089A0B2 /* Sources */,
+				CD4D92D31BF2D5EC0089A0B2 /* Frameworks */,
+				CD4D92D41BF2D5EC0089A0B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4D92D81BF2D5EC0089A0B2 /* PBXTargetDependency */,
+			);
+			name = TestingDynamicLibraryLoadTrackerUITests;
+			productName = TestingDynamicLibraryLoadTrackerUITests;
+			productReference = CD4D92D61BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CD98F66F1BEED80700627134 /* DynamicLibraryLoadTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD98F6841BEED80800627134 /* Build configuration list for PBXNativeTarget "DynamicLibraryLoadTracker" */;
@@ -153,6 +294,17 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Ignat Remizov";
 				TargetAttributes = {
+					CD4D92B71BF2D5EB0089A0B2 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CD4D92CA1BF2D5EC0089A0B2 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CD4D92B71BF2D5EB0089A0B2;
+					};
+					CD4D92D51BF2D5EC0089A0B2 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CD4D92B71BF2D5EB0089A0B2;
+					};
 					CD98F66F1BEED80700627134 = {
 						CreatedOnToolsVersion = 7.1;
 					};
@@ -167,6 +319,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CD98F6661BEED80700627134;
 			productRefGroup = CD98F6711BEED80700627134 /* Products */;
@@ -175,11 +328,38 @@
 			targets = (
 				CD98F66F1BEED80700627134 /* DynamicLibraryLoadTracker */,
 				CD98F6791BEED80700627134 /* DynamicLibraryLoadTrackerTests */,
+				CD4D92B71BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker */,
+				CD4D92CA1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests */,
+				CD4D92D51BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CD4D92B61BF2D5EB0089A0B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4D92C51BF2D5EC0089A0B2 /* LaunchScreen.storyboard in Resources */,
+				CD4D92C21BF2D5EC0089A0B2 /* Assets.xcassets in Resources */,
+				CD4D92C01BF2D5EC0089A0B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D92C91BF2D5EC0089A0B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D92D41BF2D5EC0089A0B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD98F66E1BEED80700627134 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +377,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD4D92B41BF2D5EB0089A0B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4D92BD1BF2D5EC0089A0B2 /* TDLLTViewController.swift in Sources */,
+				CD4D92BB1BF2D5EC0089A0B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D92C71BF2D5EC0089A0B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4D92D01BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4D92D21BF2D5EC0089A0B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD4D92DB1BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD98F66B1BEED80700627134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +421,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CD4D92CD1BF2D5EC0089A0B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD4D92B71BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker */;
+			targetProxy = CD4D92CC1BF2D5EC0089A0B2 /* PBXContainerItemProxy */;
+		};
+		CD4D92D81BF2D5EC0089A0B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD4D92B71BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker */;
+			targetProxy = CD4D92D71BF2D5EC0089A0B2 /* PBXContainerItemProxy */;
+		};
 		CD98F67D1BEED80700627134 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CD98F66F1BEED80700627134 /* DynamicLibraryLoadTracker */;
@@ -223,7 +438,96 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		CD4D92BE1BF2D5EC0089A0B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD4D92BF1BF2D5EC0089A0B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD4D92C31BF2D5EC0089A0B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD4D92C41BF2D5EC0089A0B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		CD4D92DD1BF2D5EC0089A0B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TestingDynamicLibraryLoadTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD4D92DE1BF2D5EC0089A0B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TestingDynamicLibraryLoadTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD4D92DF1BF2D5EC0089A0B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestingDynamicLibraryLoadTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingDynamicLibraryLoadTracker.app/TestingDynamicLibraryLoadTracker";
+			};
+			name = Debug;
+		};
+		CD4D92E01BF2D5EC0089A0B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestingDynamicLibraryLoadTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingDynamicLibraryLoadTracker.app/TestingDynamicLibraryLoadTracker";
+			};
+			name = Release;
+		};
+		CD4D92E11BF2D5EC0089A0B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TestingDynamicLibraryLoadTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TestingDynamicLibraryLoadTracker;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CD4D92E21BF2D5EC0089A0B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TestingDynamicLibraryLoadTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TestingDynamicLibraryLoadTracker;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		CD98F6821BEED80800627134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -371,6 +675,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD4D92E31BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4D92DD1BF2D5EC0089A0B2 /* Debug */,
+				CD4D92DE1BF2D5EC0089A0B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD4D92E41BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4D92DF1BF2D5EC0089A0B2 /* Debug */,
+				CD4D92E01BF2D5EC0089A0B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD4D92E51BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4D92E11BF2D5EC0089A0B2 /* Debug */,
+				CD4D92E21BF2D5EC0089A0B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CD98F66A1BEED80700627134 /* Build configuration list for PBXProject "DynamicLibraryLoadTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -387,6 +715,7 @@
 				CD98F6861BEED80800627134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD98F6871BEED80800627134 /* Build configuration list for PBXNativeTarget "DynamicLibraryLoadTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +724,7 @@
 				CD98F6891BEED80800627134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

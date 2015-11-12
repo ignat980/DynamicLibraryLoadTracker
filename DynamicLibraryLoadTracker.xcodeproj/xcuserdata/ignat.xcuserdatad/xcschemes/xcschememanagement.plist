@@ -9,9 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TestingDynamicLibraryLoadTracker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CD4D92B71BF2D5EB0089A0B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD4D92CA1BF2D5EC0089A0B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD4D92D51BF2D5EC0089A0B2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CD98F66F1BEED80700627134</key>
 		<dict>
 			<key>primary</key>
