@@ -462,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				INFOPLIST_FILE = TestingDynamicLibraryLoadTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTracker;
@@ -473,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				INFOPLIST_FILE = TestingDynamicLibraryLoadTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.students.TestingDynamicLibraryLoadTracker;
@@ -682,6 +684,7 @@
 				CD4D92DE1BF2D5EC0089A0B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD4D92E41BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +693,7 @@
 				CD4D92E01BF2D5EC0089A0B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD4D92E51BF2D5EC0089A0B2 /* Build configuration list for PBXNativeTarget "TestingDynamicLibraryLoadTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +702,7 @@
 				CD4D92E21BF2D5EC0089A0B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD98F66A1BEED80700627134 /* Build configuration list for PBXProject "DynamicLibraryLoadTracker" */ = {
 			isa = XCConfigurationList;
