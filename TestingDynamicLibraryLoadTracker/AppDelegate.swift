@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  TestingDynamicLibraryLoadTracker
 //
-//  Created by Ignat Remizov on 11/10/15.
-//  Copyright © 2015 Ignat Remizov. All rights reserved.
+//  Created by IR on 11/10/15.
+//  Copyright © 2015 IR. All rights reserved.
 //
 
 import UIKit
@@ -13,11 +13,14 @@ import DynamicLibraryLoadTracker
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    ///Initialize tracker
+    let tracker = DynamicLibraryLoadTracker()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let dyldTracker = DynamicLibraryLoadTracker.init()
-        // Override point for customization after application launch.
+        //Pass the tracker to the application
+        let rootViewController = window?.rootViewController as! TDLLTViewController
+        rootViewController.tracker = tracker
         return true
     }
 
@@ -42,7 +45,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-

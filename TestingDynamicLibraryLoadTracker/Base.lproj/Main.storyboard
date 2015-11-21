@@ -16,11 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y1J-38-5Id">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="C9C-0J-yHm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y1J-38-5Id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2yG-eH-3Si"/>
+                            <constraint firstItem="y1J-38-5Id" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4re-nW-K4p"/>
+                            <constraint firstItem="y1J-38-5Id" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ZAE-0E-6Z8"/>
+                            <constraint firstAttribute="trailing" secondItem="y1J-38-5Id" secondAttribute="trailing" id="bwh-D9-0rD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="y1J-38-5Id" id="ieK-ui-SLd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="422" y="235"/>
         </scene>
     </scenes>
 </document>
