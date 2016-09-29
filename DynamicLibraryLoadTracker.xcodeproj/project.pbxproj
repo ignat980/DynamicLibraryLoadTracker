@@ -179,11 +179,9 @@
 				TargetAttributes = {
 					CD4D92B71BF2D5EB0089A0B2 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = VC8T7HZ955;
 					};
 					CD98F66F1BEED80700627134 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = VC8T7HZ955;
 					};
 				};
 			};

@@ -52,9 +52,9 @@ public class DynamicLibraryLoadTracker: NSObject {
     public func save() {
         NSKeyedArchiver.archiveRootObject(logs, toFile: directoryForLog)
     }
-    
-    //Save when deinitailzed (edge case where this library is set as an optional)
+
     deinit {
+        //Save on deinitailzation (edge case where this library is set as an optional)
         save()
     }
 }
