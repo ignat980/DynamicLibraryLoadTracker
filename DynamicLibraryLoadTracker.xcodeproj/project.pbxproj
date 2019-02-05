@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD48DDC72209B8DA00368D04 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD4D92B81BF2D5EB0089A0B2 /* TestingDynamicLibraryLoadTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingDynamicLibraryLoadTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D92BA1BF2D5EC0089A0B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4D92BC1BF2D5EC0089A0B2 /* TDLLTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLLTViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		CD98F6661BEED80700627134 = {
 			isa = PBXGroup;
 			children = (
+				CD48DDC72209B8DA00368D04 /* README.md */,
 				CD98F6721BEED80700627134 /* DynamicLibraryLoadTracker */,
 				CD4D92B91BF2D5EC0089A0B2 /* TestingDynamicLibraryLoadTracker */,
 				CD98F6711BEED80700627134 /* Products */,
