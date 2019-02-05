@@ -5,7 +5,7 @@
 //  Created by Ignat Remizov on 11/8/15.
 //  Copyright © 2019 Ignat Remizov. All rights reserved.
 //
-// I used http://ddeville.me/2014/04/dynamic-linking/ for reference. It was a great blog to direct me on how to use the dyld API
+// I used http://ddeville.me/2014/04/dynamic-linking for reference. It was a great blog to direct me on how to use the dyld API
 
 import Foundation
 
