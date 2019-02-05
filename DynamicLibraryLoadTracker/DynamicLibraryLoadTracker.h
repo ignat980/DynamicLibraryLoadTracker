@@ -2,8 +2,8 @@
 //  DynamicLibraryLoadTracker.h
 //  DynamicLibraryLoadTracker
 //
-//  Created by IR on 11/7/15.
-//  Copyright © 2015 IR. All rights reserved.
+//  Created by Ignat Remizov on 11/7/15.
+//  Copyright © 2019 Ignat Remizov. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

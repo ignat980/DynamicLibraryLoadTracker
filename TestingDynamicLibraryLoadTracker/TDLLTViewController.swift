@@ -2,14 +2,18 @@
 //  TDLLTViewController.swift
 //  TestingDynamicLibraryLoadTracker
 //
-//  Created by IR on 11/10/15.
-//  Copyright © 2015 IR. All rights reserved.
+//  Created by Ignat Remizov on 11/10/15.
+//  Copyright © 2019 Ignat Remizov. All rights reserved.
 //
 
 import UIKit
 import DynamicLibraryLoadTracker
 
 class TDLLTViewController: UIViewController {
+    
+    private lazy var __once: () = {[unowned self] in
+            self.tracker.printLastLog()
+        }()
     
     @IBOutlet var tableView: UITableView!
     var tracker: DynamicLibraryLoadTracker!
@@ -18,16 +22,14 @@ class TDLLTViewController: UIViewController {
         super.viewDidLoad()
         
         //This is used to reload the table view when the app is opened from background, usually more libraries are loaded
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableView", name: UIApplicationDidBecomeActiveNotification , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TDLLTViewController.updateTableView), name: NSNotification.Name.UIApplicationDidBecomeActive , object: nil)
     }
     
     ///Print after UI is loaded
-    var predicate = dispatch_once_t()
-    override func viewDidAppear(animated: Bool) {
+    var predicate = Int()
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dispatch_once(&predicate) {[unowned self] in
-            self.tracker.printLastLog()
-        }
+        _ = self.__once
     }
     
     func updateTableView() {
@@ -37,7 +39,7 @@ class TDLLTViewController: UIViewController {
 }
 
 extension TDLLTViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else {
@@ -45,22 +47,22 @@ extension TDLLTViewController: UITableViewDataSource {
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell
-        if let dequedCell = tableView.dequeueReusableCellWithIdentifier("libCell") {
+        if let dequedCell = tableView.dequeueReusableCell(withIdentifier: "libCell") {
             cell = dequedCell
         } else {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "libCell")
+            cell = UITableViewCell(style: .default, reuseIdentifier: "libCell")
         }
-        if indexPath.section == 1 {
-            cell.textLabel?.text = tracker.log.objectAtIndex(indexPath.row) as? String
+        if (indexPath as NSIndexPath).section == 1 {
+            cell.textLabel?.text = tracker.log.object(at: (indexPath as NSIndexPath).row) as? String
         } else {
             cell.textLabel?.text = "Total log entries: \(tracker.log.count)"
         }
         return cell
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
 }
