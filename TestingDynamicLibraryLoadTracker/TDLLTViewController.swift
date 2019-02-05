@@ -16,7 +16,7 @@ class TDLLTViewController: UIViewController {
         }()
     
     @IBOutlet var tableView: UITableView!
-    var tracker: DynamicLibraryLoadTracker!
+    @objc var tracker: DynamicLibraryLoadTracker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,13 @@ class TDLLTViewController: UIViewController {
     }
     
     ///Print after UI is loaded
-    var predicate = Int()
+    @objc var predicate = Int()
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         _ = self.__once
     }
     
-    func updateTableView() {
+    @objc func updateTableView() {
         tableView.reloadData()
     }
     

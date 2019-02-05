@@ -24,7 +24,7 @@ let logs: NSMutableArray = []
 open class DynamicLibraryLoadTracker: NSObject {
     
     ///An array of entries for each library that was loaded and unloaded, added by order of events
-    open var log:NSArray {
+    @objc open var log:NSArray {
         get {
             return logs
         }
@@ -42,14 +42,14 @@ open class DynamicLibraryLoadTracker: NSObject {
     }
     
 
-    open func printLastLog() {
+    @objc open func printLastLog() {
         if let unarchivedLibrariesFile = NSKeyedUnarchiver.unarchiveObject(withFile: directoryForLog) as? NSMutableArray {
             print(unarchivedLibrariesFile)
         }
     }
     
     ///Save the log to disk into the caches directory
-    open func save() {
+    @objc open func save() {
         NSKeyedArchiver.archiveRootObject(logs, toFile: directoryForLog)
     }
 

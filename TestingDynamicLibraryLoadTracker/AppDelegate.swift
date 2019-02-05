@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     ///Initialize tracker
-    let tracker = DynamicLibraryLoadTracker()
+    @objc let tracker = DynamicLibraryLoadTracker()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //Pass the tracker to the application
