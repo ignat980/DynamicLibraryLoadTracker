@@ -22,7 +22,7 @@ class TDLLTViewController: UIViewController {
         super.viewDidLoad()
         
         //This is used to reload the table view when the app is opened from background, usually more libraries are loaded
-        NotificationCenter.default.addObserver(self, selector: #selector(TDLLTViewController.updateTableView), name: NSNotification.Name.UIApplicationDidBecomeActive , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TDLLTViewController.updateTableView), name: UIApplication.didBecomeActiveNotification , object: nil)
     }
     
     ///Print after UI is loaded

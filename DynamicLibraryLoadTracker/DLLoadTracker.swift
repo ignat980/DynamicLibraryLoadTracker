@@ -37,7 +37,7 @@ open class DynamicLibraryLoadTracker: NSObject {
         _dyld_register_func_for_remove_image(callback_remove_image)
         
         ///Save when the app is put into background or closed
-        NotificationCenter.default.addObserver(self, selector: #selector(DynamicLibraryLoadTracker.save), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DynamicLibraryLoadTracker.save), name: UIApplication.didEnterBackgroundNotification, object: nil)
 
     }
     
@@ -124,11 +124,12 @@ func _image_visit_load_commands(_ mh:UnsafePointer<mach_header>, visitor: ((Unsa
     let header_size = _image_header_size(mh)
     var stop:Bool = false
     
-    if var lc_cursor = UnsafePointer<load_command>(bitPattern: mh.hashValue + header_size) { //Create a pointer past the header
+    if var lc_cursor = UnsafeRawPointer(bitPattern: mh.hashValue + header_size) { //Create a pointer past the header
         for _:UInt32 in 0 ..< mh.pointee.ncmds {
+            let lc = lc_cursor.assumingMemoryBound(to: load_command.self)
             
             do {
-                try visitor(lc_cursor, &stop)
+                try visitor(lc, &stop)
             } catch let error as NSError{
                 print("Visitor function threw an error: \(error.localizedDescription)")
             }
@@ -137,11 +138,12 @@ func _image_visit_load_commands(_ mh:UnsafePointer<mach_header>, visitor: ((Unsa
             if stop {return}
             
             //Assign cursor to next command
-            lc_cursor += Int(lc_cursor.pointee.cmdsize/8)
+            lc_cursor += Int(lc.pointee.cmdsize)
             /* - NOTE -
-             += forcefully creates an unwrapped pointer after calling .advance() on itself, so it uses the size of the struct that the pointer is typed to when performing this operation. It's just a nice coincidence that load_command is exactly 8 bytes and cmdsize will always be a multiple of 8 so that I can use this shorthand. It is also possible to use this shorthand for UnsafeRawPointer types, since .advance() goes by bytes and no division would be required.
+             += forcefully creates an unwrapped pointer after calling .advance() on itself.
+             It is possible to use this shorthand with an UnsafePointer, but only in specific cases where the size of the struct is small so it is easy to understand, since advance() uses the size of the struct that the UnsafePointer is typed to when performing the operation.
              The more 'proper' way to do this would be to construct a new pointer like this:
-             lc_cursor = UnsafePointer<load_command>(bitPattern: lc_cursor.hashValue + Int(lc_cursor.pointee.cmdsize))
+             lc_cursor = UnsafeRawPointer(bitPattern: lc_cursor.hashValue + Int(lc_cursor.pointee.cmdsize))
             */
         }
     }
