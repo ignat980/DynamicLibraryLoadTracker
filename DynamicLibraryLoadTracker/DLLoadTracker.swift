@@ -95,11 +95,11 @@ func _update_record_for_image(_ mh:UnsafePointer<mach_header>?, added:Bool) {
         image_name = ""
     }
     
-    let image_base_address = image_info.dli_fbase.debugDescription //Get Dynamic Library base address in hex
+    let image_base_address = image_info.dli_fbase!.debugDescription  //Get Dynamic Library base address in hex
     let image_text_size = String(_image_text_segment_size(mh!), radix:16) //Get the exectution size of the library
     let image_uuid = _image_retrieve_uuid(mh!).uuidString //Get the uuid for the library
     let log = added ? "Added" : "Removed"
-    let info = "\(log): \(image_name): 0x\(image_base_address) (0x\(image_text_size)) \(image_path) <\(image_uuid)>"
+    let info = "\(log): \(image_name): \(image_base_address) (0x\(image_text_size)) \(image_path) <\(image_uuid)>"
     logs.add(info)
 }
 
@@ -124,7 +124,7 @@ func _image_visit_load_commands(_ mh:UnsafePointer<mach_header>, visitor: ((Unsa
     let header_size = _image_header_size(mh)
     var stop:Bool = false
     
-    var lc_cursor = UnsafeRawPointer(mh._rawValue) + header_size //Create a pointer past the header
+    var lc_cursor = UnsafeRawPointer(mh) + header_size //Create a pointer past the header
     for _:UInt32 in 0 ..< mh.pointee.ncmds {
         let lc = lc_cursor.assumingMemoryBound(to: load_command.self)
         
@@ -180,16 +180,16 @@ func _image_text_segment_size(_ mh:UnsafePointer<mach_header>) -> UInt32 {
             return
         }
         if (lc.pointee.cmd == UInt32(LC_SEGMENT)) {
-            let seg_cmd = UnsafeMutableRawPointer(mutating: lc).bindMemory(to: segment_command.self, capacity: 1)
-            let segname = String(validatingUTF8: &seg_cmd.pointee.segname.0)! //TODO: figure out why I can't use a non-muating pointer to pass a value to generate a string
+            let seg_cmd = UnsafeMutableRawPointer(mutating: lc).assumingMemoryBound(to: segment_command.self)
+            let segname = String(cString: &seg_cmd.pointee.segname.0)
             if segname == SEG_TEXT {
                 text_size = UInt32(seg_cmd.pointee.vmsize)
                 stop = true
                 return
             }
         } else if (lc.pointee.cmd == UInt32(LC_SEGMENT_64)) {
-            let seg_cmd = UnsafeMutableRawPointer(mutating: lc).bindMemory(to: segment_command_64.self, capacity: 1)
-            let segname = String(validatingUTF8: &seg_cmd.pointee.segname.0)!
+            let seg_cmd = UnsafeMutableRawPointer(mutating: lc).assumingMemoryBound(to: segment_command_64.self)
+            let segname = String(cString: &seg_cmd.pointee.segname.0)
             if segname == SEG_TEXT {
                 text_size = UInt32(seg_cmd.pointee.vmsize)
                 stop = true
