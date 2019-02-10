@@ -181,10 +181,12 @@
 				TargetAttributes = {
 					CD4D92B71BF2D5EB0089A0B2 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = "Ignat Remizov";
 						LastSwiftMigration = 1010;
 					};
 					CD98F66F1BEED80700627134 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = "Ignat Remizov";
 						LastSwiftMigration = 1010;
 					};
 				};
@@ -343,6 +345,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "Ignat Remizov";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -401,6 +404,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "Ignat Remizov";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

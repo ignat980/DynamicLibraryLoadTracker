@@ -95,7 +95,7 @@ func _update_record_for_image(_ mh:UnsafePointer<mach_header>?, added:Bool) {
         image_name = ""
     }
     
-    let image_base_address = String(image_info.dli_fbase.hashValue, radix:16) //Get Dynamic Library base address in hex
+    let image_base_address = image_info.dli_fbase.debugDescription //Get Dynamic Library base address in hex
     let image_text_size = String(_image_text_segment_size(mh!), radix:16) //Get the exectution size of the library
     let image_uuid = _image_retrieve_uuid(mh!).uuidString //Get the uuid for the library
     let log = added ? "Added" : "Removed"
@@ -124,28 +124,27 @@ func _image_visit_load_commands(_ mh:UnsafePointer<mach_header>, visitor: ((Unsa
     let header_size = _image_header_size(mh)
     var stop:Bool = false
     
-    if var lc_cursor = UnsafeRawPointer(bitPattern: mh.hashValue + header_size) { //Create a pointer past the header
-        for _:UInt32 in 0 ..< mh.pointee.ncmds {
-            let lc = lc_cursor.assumingMemoryBound(to: load_command.self)
-            
-            do {
-                try visitor(lc, &stop)
-            } catch let error as NSError{
-                print("Visitor function threw an error: \(error.localizedDescription)")
-            }
-            
-            //If the visitor reached its desired command, stop iteration
-            if stop {return}
-            
-            //Assign cursor to next command
-            lc_cursor += Int(lc.pointee.cmdsize)
-            /* - NOTE -
-             += forcefully creates an unwrapped pointer after calling .advance() on itself.
-             It is possible to use this shorthand with an UnsafePointer, but only in specific cases where the size of the struct is small so it is easy to understand, since advance() uses the size of the struct that the UnsafePointer is typed to when performing the operation.
-             The more 'proper' way to do this would be to construct a new pointer like this:
-             lc_cursor = UnsafeRawPointer(bitPattern: lc_cursor.hashValue + Int(lc_cursor.pointee.cmdsize))
-            */
+    var lc_cursor = UnsafeRawPointer(mh._rawValue) + header_size //Create a pointer past the header
+    for _:UInt32 in 0 ..< mh.pointee.ncmds {
+        let lc = lc_cursor.assumingMemoryBound(to: load_command.self)
+        
+        do {
+            try visitor(lc, &stop)
+        } catch let error as NSError{
+            print("Visitor function threw an error: \(error.localizedDescription)")
         }
+        
+        //If the visitor reached its desired command, stop iteration
+        if stop {return}
+        
+        //Assign cursor to next command
+        lc_cursor += Int(lc.pointee.cmdsize)
+        /* - NOTE -
+         += forcefully creates an unwrapped pointer after calling .advance() on itself.
+         It is possible to use this shorthand with an UnsafePointer, but only in specific cases where the size of the struct is small so it is easy to understand, since advance() uses the size of the struct that the UnsafePointer is typed to when performing the operation.
+         The more 'proper' way to do this would be to construct a new pointer like this:
+         lc_cursor = UnsafeRawPointer(bitPattern: lc_cursor.hashValue + Int(lc_cursor.pointee.cmdsize))
+        */
     }
 }
 
