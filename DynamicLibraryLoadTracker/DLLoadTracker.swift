@@ -130,7 +130,7 @@ func _image_visit_load_commands(_ mh:UnsafePointer<mach_header>, visitor: ((Unsa
         
         do {
             try visitor(lc, &stop)
-        } catch let error as NSError{
+        } catch let error as NSError {
             print("Visitor function threw an error: \(error.localizedDescription)")
         }
         
@@ -181,7 +181,7 @@ func _image_text_segment_size(_ mh:UnsafePointer<mach_header>) -> UInt32 {
         }
         if (lc.pointee.cmd == UInt32(LC_SEGMENT)) {
             let seg_cmd = UnsafeMutableRawPointer(mutating: lc).assumingMemoryBound(to: segment_command.self)
-            let segname = String(cString: &seg_cmd.pointee.segname.0)
+            let segname = String(cString: &seg_cmd.pointee.segname, maxLength:16)
             if segname == SEG_TEXT {
                 text_size = UInt32(seg_cmd.pointee.vmsize)
                 stop = true
@@ -189,7 +189,7 @@ func _image_text_segment_size(_ mh:UnsafePointer<mach_header>) -> UInt32 {
             }
         } else if (lc.pointee.cmd == UInt32(LC_SEGMENT_64)) {
             let seg_cmd = UnsafeMutableRawPointer(mutating: lc).assumingMemoryBound(to: segment_command_64.self)
-            let segname = String(cString: &seg_cmd.pointee.segname.0)
+            let segname = String(cString: &seg_cmd.pointee.segname, maxLength:16)
             if segname == SEG_TEXT {
                 text_size = UInt32(seg_cmd.pointee.vmsize)
                 stop = true
@@ -199,4 +199,14 @@ func _image_text_segment_size(_ mh:UnsafePointer<mach_header>) -> UInt32 {
     })
     
     return text_size
+}
+
+
+extension String {
+    //Special initializer to get a string from a possibly not-null terminated but usually null-terminated UTF-8 encoded C String.
+    init (cString: UnsafeRawPointer!, maxLength: Int) {
+        var buffer = [UInt8](repeating: 0, count: maxLength + 1)
+        memcpy(&buffer, cString, maxLength)
+        self.init(cString: buffer)
+    }
 }

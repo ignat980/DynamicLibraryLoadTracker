@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DynamicLibraryLoadTracker/DLLoadTracker.swift"
-            timestampString = "571525877.7869"
+            timestampString = "571598272.9745311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
@@ -36,12 +36,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DynamicLibraryLoadTracker/DLLoadTracker.swift"
-            timestampString = "571525877.787765"
+            timestampString = "571598272.975021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
             landmarkName = "_update_record_for_image(_:added:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DynamicLibraryLoadTracker/DLLoadTracker.swift"
+            timestampString = "571598272.975343"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "_image_text_segment_size(_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
